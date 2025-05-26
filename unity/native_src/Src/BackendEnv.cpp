@@ -223,6 +223,7 @@ void FBackendEnv::GlobalPrepare()
     if (!GPlatform)
     {
         std::string Flags = "--stack_size=856";
+        Flags += " --allow-natives-syntax";
 #if PUERTS_DEBUG
         Flags += " --expose-gc";
 #endif
