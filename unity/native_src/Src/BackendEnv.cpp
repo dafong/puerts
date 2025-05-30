@@ -225,21 +225,8 @@ void FBackendEnv::GlobalPrepare()
     {
         std::string Flags = "--stack_size=856";
         Flags += " --with_inspector";
-        Flags += " --allow-natives-syntax";
-
         Flags += " --expose-gc";
-
-        Flags += " --trace-gc";
-
-        Flags += " --noconcurrent_sweeping";
-
-        Flags += " --nouse_idle_notification";
-
-        Flags += " --gc-interval=100000";
-
-        Flags += " --max-old-space-size=1000";
-
-        Flags += " --max-semi-space-size=128";
+        // Flags += " --trace-gc";
 
 
 #if defined(PLATFORM_IOS) || defined(PLATFORM_OHOS) || defined(JITLESS)
