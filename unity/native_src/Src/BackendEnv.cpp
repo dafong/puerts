@@ -223,9 +223,11 @@ void FBackendEnv::GlobalPrepare()
     if (!GPlatform)
     {
         std::string Flags = "--stack_size=856";
-#if PUERTS_DEBUG
         Flags += " --expose-gc";
-#endif
+        Flags += " --with_inspector";
+        Flags += " --allow-natives-syntax";
+        
+
 #if defined(PLATFORM_IOS) || defined(PLATFORM_OHOS) || defined(JITLESS)
         Flags += " --jitless --no-expose-wasm";
 #endif
